@@ -19,14 +19,14 @@ jobs:
 
     - name: Install dependencies
       run: flutter pub get
-      working-directory: ./material_order
+      working-directory: ./material_request_app/material_order
 
     - name: Build APK (release)
       run: flutter build apk --release
-      working-directory: ./material_order
+      working-directory: ./material_request_app/material_order
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: app-release
-        path: ./material_order/build/app/outputs/flutter-apk/app-release.apk
+        path: material_request_app/material_order/build/app/outputs/flutter-apk/app-release.apk
